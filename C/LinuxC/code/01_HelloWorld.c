@@ -1,69 +1,8 @@
 // Start to Learn LinuxC
 
-# include <studio.h>
-
-int main(void){}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# include <stdio.h>
+
+int main(void){
+    printf("Hello, world.\n");
+}
 
