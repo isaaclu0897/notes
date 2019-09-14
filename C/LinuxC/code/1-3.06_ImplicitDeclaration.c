@@ -2,14 +2,6 @@
 
 #include <stdio.h>
 
-
-void threeline(void); // if not declare first, order must be right
-// void threeline(); // it is ok, but complier will not check parameter
-
-void newline(void);
-
-
-
 int main (void){
     printf("First Line.\n");
 
