@@ -1,25 +1,14 @@
 // Use Euclidean algorithm to implement GCD
 #include <stdio.h>
 
-int swap(int *ap, int *bp) {
-        int tmp = *ap;
-        *ap = *bp;
-        *bp = tmp;
-        return 0;
-}
-
 int euclidGCD(int x1, int x2) {
-        // let Bigger number to be x1
-        if (x2 > x1) swap(&x1, &x2);
-
-        int remainder = x1 % x2;
-
+        // printf("%d, %d\n", x1, x2);
         // base case: If A can be divisible by B, then GCD is B
-        if (remainder == 0) {
-                return x2;
+        if (x2 == 0) {
+                return x1;
         } else {
-                x1 = remainder;
-                return euclidGCD(x1, x2);
+                int remainder = x1 % x2;
+                return euclidGCD(x2, remainder);
         }
 
 }
