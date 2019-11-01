@@ -7,22 +7,20 @@ int checkTheNumberOfDigits(int number){
 	digit = number % 10;
 	tenDigit = number / 10;
 	
-    int acc = 0;
+    int count = 0;
 
-    if (digit == 9) acc++;
-    if (tenDigit == 9) acc++;
+    if (digit == 9) count++;
+    if (tenDigit == 9) count++;
 
     return acc;
 }
 
 int main(void) {
-    int n = 100;
-	int i = 0;
+    int endNumber = 100;
     int result = 0;
-    while(i <= n){
+    for (int i=0; i<=endNumber; i++){
 	    result += checkTheNumberOfDigits(i);
         // printf("%d %d\n", i, result);
-        i++;
     }
     
     printf("result is %d\n", result);
