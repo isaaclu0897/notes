@@ -14,25 +14,46 @@ void diamond (char symbol, int length) {
         char space = ' ';
         int mid = length / 2 + 1;
 
-        printf("%d\n", mid);
-        for (int i=1; i<=mid; i++) {
-            for (int j=1; j<=mid; j++) {
+        for (int i=1; i<=mid; i++) { // print upper triangle
+            for (int j=1; j<=mid; j++) { // print upper-right triangle
                 if (j > (mid-i)) {
-                    printf("%d%c", j, symbol);
+                    printf(" %c", symbol);
                 }
                 else {
-                    printf("%d%c", j, space);
+                    printf(" %c", space);
                 }
             }
-            for (int j=mid+1; j<=length; j++) {
+            for (int j=mid+1; j<=length; j++) { // print upper-left triangle
+
                 if (j < (mid+i)) {
-                    printf("%d%c", j, symbol);
+                    printf(" %c", symbol);
                 }
                 else {
-                    printf("%d%c", j, space);
+                    printf(" %c", space);
+                }
+            }    
+            printf("\n");
+        }
+
+        for (int i=mid-1; i>0; i--) { // print upper triangle
+            for (int j=1; j<=mid; j++) { // print lowwer-right triangle
+                if (j > (mid-i)) {
+                    printf(" %c", symbol);
+                }
+                else {
+                    printf(" %c", space);
                 }
             }
-        printf("\n");
+            for (int j=mid+1; j<=length; j++) { // print lowwer-left triangle
+
+                if (j < (mid+i)) {
+                    printf(" %c", symbol);
+                }
+                else {
+                    printf(" %c", space);
+                }
+            }
+            printf("\n");
         }
     }
     else {
@@ -41,7 +62,7 @@ void diamond (char symbol, int length) {
 }
 
 int main (void) {
-    diamond('*', 7);
+    diamond('*', 9);
 
     return 0;
 }
