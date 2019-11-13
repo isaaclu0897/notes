@@ -9,12 +9,23 @@ int isOdd (int number) {
     }
 }
 
-void diamond (char symbol, int length) {
-    if (isOdd(length)) {
-        char space = ' ';
-        int mid = length / 2 + 1;
 
-        for (int i=1; i<=mid; i++) { // print upper triangle
+void printDiamond (char symbol, int length) {
+    auto void sol1 (void);    
+    
+    char space = ' ';
+    int mid = length / 2 + 1;
+
+    if (isOdd(length)) {
+        sol1();
+    }
+    else {
+        printf("Length is even.\n");
+    }
+
+    void sol1 (void) {
+        // print upper triangle
+        for (int i=1; i<=mid; i++) { 
             for (int j=1; j<=mid; j++) { // print upper-right triangle
                 if (j > (mid-i)) {
                     printf(" %c", symbol);
@@ -35,7 +46,8 @@ void diamond (char symbol, int length) {
             printf("\n");
         }
 
-        for (int i=mid-1; i>0; i--) { // print upper triangle
+        // print upper triangle
+        for (int i=mid-1; i>0; i--) { 
             for (int j=1; j<=mid; j++) { // print lowwer-right triangle
                 if (j > (mid-i)) {
                     printf(" %c", symbol);
@@ -56,13 +68,13 @@ void diamond (char symbol, int length) {
             printf("\n");
         }
     }
-    else {
-        printf("Length is even.\n");
-    }
+
 }
 
 int main (void) {
-    diamond('*', 9);
+    printDiamond('*', 9);
 
     return 0;
 }
+
+
