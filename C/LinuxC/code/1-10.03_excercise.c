@@ -8,6 +8,8 @@ int main(void)
 
     while (1) {
 
+        sum = 0;
+
         scanf("%s", input);
 
         for (i = 0; input[i] != '\0'; i++)
